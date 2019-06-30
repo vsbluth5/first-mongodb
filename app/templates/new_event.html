@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>New Event</title>
+    </head>
+    <body>
+      <h1>Community Events Board</h1>
+      <div class="event-list">
+        <ul>
+          {% for event in events %}
+            <li>{{ event.event }} - {{ event.date }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <a href = "/add">Add</a>
+      
+    </body>
+</html>
