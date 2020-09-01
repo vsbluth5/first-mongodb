@@ -1,10 +1,13 @@
 import os
-from app import app
+from flask import Flask
 from flask import render_template, request, redirect, session, url_for
 from bson.objectid import ObjectId
 from flask_pymongo import PyMongo
 from datetime import datetime
 from dotenv import load_dotenv
+
+# -- Initialization section --
+app = Flask(__name__)
 
 events = [
         {"event":"First Day of Classes", "date":"2019-08-21"},
